@@ -18,17 +18,14 @@ This repository is the official implementation of our TCSVT paper **"Cross-View 
 
 ---
 
-## 📊 Datasets
+## 📊 Framework
 
-We evaluate on three public industrial anomaly detection datasets:
+<img width="1426" height="794" alt="image" src="https://github.com/user-attachments/assets/63363842-411f-45e9-ac1e-a4a414dc86e3" />
 
-| Dataset | Classes | Total Images | Resolution | Description |
-|---------|---------|--------------|------------|-------------|
-| **MVTec‑AD** | 15 | 5,354 | up to 1024×1024 | Classic benchmark |
-| **VisA** | 12 | 10,821 | high‑res | Complex structures, multiple instances per class |
-| **Real‑IAD** | 30 | 151,050 | 2k–5k | Large‑scale, challenging (0.01%–6.75% defect proportion) |
 
----
+## 📊 Detailed structure 
+CVDA
+<img width="553" height="636" alt="image" src="https://github.com/user-attachments/assets/f855de51-bc46-44cb-a21e-d1941ff486ed" />
 
 ## 📈 Evaluation Metrics
 
