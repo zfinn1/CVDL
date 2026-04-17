@@ -2,10 +2,7 @@
 
 > **📢 News (2026-04-15):** Our paper has been accepted by **IEEE Transactions on Circuits and Systems for Video Technology (TCSVT)**! We are currently organizing the full code, pre‑trained models, and dataset preparation scripts to ensure reproducibility. The complete project (code, datasets, documentation) will be open‑sourced soon. Stay tuned! ⭐
 
-[![Paper](http://img.shields.io/badge/Paper-TCSVT.2026.XXXXXX-blue)]() <!-- DOI will be added -->
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![Python 3.8](https://img.shields.io/badge/python-3.8.12-blue.svg)](https://www.python.org/downloads/release/python-3812/)
-[![PyTorch](https://img.shields.io/badge/PyTorch-2.1.2-ee4c2c.svg)](https://pytorch.org/)
+
 
 This repository is the official implementation of our TCSVT paper **"Cross-View Dynamic Learning-Based Multi-Class Industrial Anomaly Detection"**. We propose a novel framework that jointly models multi‑scale and multi‑perspective feature interactions for high‑performance, unified anomaly detection and localization across diverse industrial product categories.
 
