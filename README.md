@@ -1,16 +1,59 @@
-Cross-View Dynamic Learning-Based Multi-Class Industrial Anomaly Detection
+# Cross-View Dynamic Learning for Multi-Class Industrial Anomaly Detection
 
-This research paper is in the submission stage. If accepted, I plan to open-source the entire project—including code, datasets, and documentation—to support reproducibility and community collaboration. This initiative aims to make our findings and tools accessible to all researchers and practitioners.
+> **📢 News (2026-04-15):** Our paper has been accepted by **IEEE Transactions on Circuits and Systems for Video Technology (TCSVT)**! We are currently organizing the full code, pre‑trained models, and dataset preparation scripts to ensure reproducibility. The complete project (code, datasets, documentation) will be open‑sourced soon. Stay tuned! ⭐
 
+[![Paper](http://img.shields.io/badge/Paper-TCSVT.2026.XXXXXX-blue)]() <!-- DOI will be added -->
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Python 3.8](https://img.shields.io/badge/python-3.8.12-blue.svg)](https://www.python.org/downloads/release/python-3812/)
+[![PyTorch](https://img.shields.io/badge/PyTorch-2.1.2-ee4c2c.svg)](https://pytorch.org/)
 
-Dataset： Real-IAD： A new large-scale challenging industrial AD dataset, containing 30 classes with totally 151,050 images; 2,000 ∼ 5,000 resolution; 0.01% ~ 6.75% defect proportions; 1:1 ~ 1:10 defect ratio. Download and extract Real-IAD into data/realiad. ：https://realiad4ad.github.io/Real-IAD/
+This repository is the official implementation of our TCSVT paper **"Cross-View Dynamic Learning-Based Multi-Class Industrial Anomaly Detection"**. We propose a novel framework that jointly models multi‑scale and multi‑perspective feature interactions for high‑performance, unified anomaly detection and localization across diverse industrial product categories.
 
+---
 
-MVTec-AD consists of 15 object categories, including 5 texture classes and 10 object classes, with a total of 5,354 high-resolution images.
+## ✨ Highlights
 
+- **Unified Multi‑Class Framework** – One single model handles **30+ product categories** (Real‑IAD) without class‑specific fine‑tuning.
+- **Cross‑View Dynamic Learning** – Dynamically fuses features from multiple views (global, local, orthogonal) to capture both subtle and structural anomalies.
+- **State‑of‑the‑Art Performance** – Achieves superior image‑level and pixel‑level results on **MVTec‑AD**, **VisA**, and the challenging **Real‑IAD** benchmark.
+- **Comprehensive Evaluation** – Provides 7 metrics (AUROC, AP, F‑max, AUPRO, and the novel **mAD**) for holistic assessment.
+- **Reproducible** – Full code, pre‑trained weights, and dataset preparation scripts will be released.
 
-VisA  contains 10,821 high-resolution images across 12 objects with complex structures, including 9,621 normal images and 1,200 anomaly images. 
+---
 
+## 📊 Datasets
 
+We evaluate on three public industrial anomaly detection datasets:
 
-Evaluation Metrics： Both image-level and pixel-level met-rics are typically used to evaluate algorithm performance in USDD. Image-level metrics assess whether an entire product is anomalous, while pixel-level metrics measure defect localization and can further evaluate defect severity. Based on previous defect detection work, seven evaluation metrics are employed. Image-level performance is evaluated using Area Under the Receiver Operator Curve (AUROC), Average Precision (AP), and F1 score at the optimal threshold (F-max). Pixel-level performance is measured by AUROC, AP, F-max, and the Area Under the Per Region Overlap (AUPRO). To provide a comprehensive assessment of the model’s perfor-mance, we compute the average of the all-evaluation metrics mentioned above, referred to as mAD. The final dataset result is calculated as the average across all classes.
+| Dataset | Classes | Total Images | Resolution | Description |
+|---------|---------|--------------|------------|-------------|
+| **MVTec‑AD** | 15 | 5,354 | up to 1024×1024 | Classic benchmark |
+| **VisA** | 12 | 10,821 | high‑res | Complex structures, multiple instances per class |
+| **Real‑IAD** | 30 | 151,050 | 2k–5k | Large‑scale, challenging (0.01%–6.75% defect proportion) |
+
+---
+
+## 📈 Evaluation Metrics
+
+We report both **image‑level** (detection) and **pixel‑level** (localization) metrics:
+
+| Level | Metrics |
+|-------|---------|
+| Image‑level | AUROC, Average Precision (AP), F1‑max (F‑max) |
+| Pixel‑level | AUROC, AP, F‑max, Area Under Per‑Region Overlap (AUPRO) |
+| **Overall** | **mAD** (mean of all seven metrics above) |
+
+Final performance is averaged across all classes within each dataset.
+
+---
+
+## 🚀 Getting Started
+
+### 1. Environments
+
+Create a new conda environment and install required packages:
+
+```bash
+conda create -n my_env python=3.8.12
+conda activate my_env
+pip install -r requirements.txt
