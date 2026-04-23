@@ -101,9 +101,9 @@ python visa_uni.py --data_path ../VisA_pytorch/1cls
 python realiad_uni.py --data_path ../Real-IAD
 
 
-##
-
-[## 🚀 Getting Started](url)
+---
+## 
+## 🚀Citation
 
 @ARTICLE{11488626,
   author={Zhou, Jingyu and Ma, Yunfeng and Jiang, Shuai and Wang, Yaonan and Liu, Min},
