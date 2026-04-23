@@ -47,27 +47,27 @@ Final performance is averaged across all classes within each dataset.
 
 Create a new conda environment and install required packages:
 
-
+```
 conda create -n my_env python=3.8.12
 conda activate my_env
 pip install -r requirements.txt
-
+```
 ### 2.  Prepare Datasets
 
 MVTec AD
 Download the MVTec-AD dataset from [URL](https://www.mvtec.com/research-teaching/datasets/mvtec-ad). Unzip the file to ../mvtec_anomaly_detection.
-
+```
 |-- mvtec_anomaly_detection
     |-- bottle
     |-- cable
     |-- capsule
     |-- ....
-
+```
 
 VisA
 
 Download the VisA dataset from [URL](https://github.com/amazon-science/spot-diff). Unzip the file to ../VisA/.
-
+```
 |-- VisA_pytorch
     |-- 1cls
         |-- candle
@@ -79,7 +79,7 @@ Download the VisA dataset from [URL](https://github.com/amazon-science/spot-diff
                     |-- good
         |-- capsules
         |-- ....
-
+```
 Real-IAD
 Contact the authors of Real-IAD [URL](https://realiad4ad.github.io/Real-IAD/) to get the net disk link.
 
@@ -97,13 +97,13 @@ Download and unzip realiad_1024 and realiad_jsons in ../Real-IAD. ../Real-IAD wi
         |-- realiad_jsons_fuiad_0.0
 ```
 ### 3. Run Experiments
-
+```
 python mvtec_uni.py --data_path ../mvtec_anomaly_detection
 
 python visa_uni.py --data_path ../VisA_pytorch/1cls
 
 python realiad_uni.py --data_path ../Real-IAD
-
+```
 
 
 ## 🚀Citation
