@@ -104,7 +104,7 @@ python realiad_uni.py --data_path ../Real-IAD
 
 
 ## 🚀Citation
-"""
+```bibtex
 @ARTICLE{11488626,
   author={Zhou, Jingyu and Ma, Yunfeng and Jiang, Shuai and Wang, Yaonan and Liu, Min},
   journal={IEEE Transactions on Circuits and Systems for Video Technology}, 
@@ -115,4 +115,4 @@ python realiad_uni.py --data_path ../Real-IAD
   pages={1-1},
   keywords={Feeds;Antennas;Frequency modulation;Radio broadcasting;Broadcasting;Broadcast technology;Circuits;Circuits and systems;Integrated circuits;Light emitting diodes;Cross-view dynamic attention;multi-class industrial anomaly detection;multi-view feature learning},
   doi={10.1109/TCSVT.2026.3685706}}
-"""
+```
