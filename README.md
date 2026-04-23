@@ -84,21 +84,24 @@ Real-IAD
 Contact the authors of Real-IAD [URL](https://realiad4ad.github.io/Real-IAD/) to get the net disk link.
 
 Download and unzip realiad_1024 and realiad_jsons in ../Real-IAD. ../Real-IAD will be like:
-
+```
 |-- Real-IAD
     |-- realiad_1024
         |-- audiokack
         |-- bottle_cap
         |-- ....
+        
     |-- realiad_jsons
         |-- realiad_jsons
         |-- realiad_jsons_sv
         |-- realiad_jsons_fuiad_0.0
-
+```
 ### 3. Run Experiments
 
 python mvtec_uni.py --data_path ../mvtec_anomaly_detection
+
 python visa_uni.py --data_path ../VisA_pytorch/1cls
+
 python realiad_uni.py --data_path ../Real-IAD
 
 
