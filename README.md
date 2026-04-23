@@ -103,7 +103,7 @@ python realiad_uni.py --data_path ../Real-IAD
 
 ##
 
-## Citation
+**## 🚀 Getting Started**
 
 @ARTICLE{11488626,
   author={Zhou, Jingyu and Ma, Yunfeng and Jiang, Shuai and Wang, Yaonan and Liu, Min},
