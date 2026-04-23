@@ -50,7 +50,7 @@ Create a new conda environment and install required packages:
 ```bash
 conda create -n my_env python=3.8.12
 conda activate my_env
-pip install -r requirements.txt
+pip install -r requirements.txt```
 
 ### 2. Prepare Datasets
 MVTec AD
