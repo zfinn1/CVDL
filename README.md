@@ -1,4 +1,4 @@
-# Cross-View Dynamic Learning for Multi-Class Industrial Anomaly Detection
+# Cross-View Dynamic Learning-Based Multi-Class Industrial Anomaly Detection
 
 > **📢 News (2026-04-15):** Our paper has been accepted by **IEEE Transactions on Circuits and Systems for Video Technology (TCSVT)**! We are currently organizing the full code, pre‑trained models, and dataset preparation scripts to ensure reproducibility. The complete project (code, datasets, documentation) will be open‑sourced soon. Stay tuned! ⭐
 
@@ -51,3 +51,66 @@ Create a new conda environment and install required packages:
 conda create -n my_env python=3.8.12
 conda activate my_env
 pip install -r requirements.txt
+
+### 2. Prepare Datasets
+MVTec AD
+Download the MVTec-AD dataset from [URL](https://www.mvtec.com/research-teaching/datasets/mvtec-ad). Unzip the file to ../mvtec_anomaly_detection.
+
+|-- mvtec_anomaly_detection
+    |-- bottle
+    |-- cable
+    |-- capsule
+    |-- ....
+
+
+VisA
+
+Download the VisA dataset from [URL](https://github.com/amazon-science/spot-diff). Unzip the file to ../VisA/.
+
+|-- VisA_pytorch
+    |-- 1cls
+        |-- candle
+            |-- ground_truth
+            |-- test
+                    |-- good
+                    |-- bad
+            |-- train
+                    |-- good
+        |-- capsules
+        |-- ....
+
+Real-IAD
+Contact the authors of Real-IAD [URL](https://realiad4ad.github.io/Real-IAD/) to get the net disk link.
+
+Download and unzip realiad_1024 and realiad_jsons in ../Real-IAD. ../Real-IAD will be like:
+
+|-- Real-IAD
+    |-- realiad_1024
+        |-- audiokack
+        |-- bottle_cap
+        |-- ....
+    |-- realiad_jsons
+        |-- realiad_jsons
+        |-- realiad_jsons_sv
+        |-- realiad_jsons_fuiad_0.0
+
+### 3. Run Experiments
+
+python mvtec_uni.py --data_path ../mvtec_anomaly_detection
+python visa_uni.py --data_path ../VisA_pytorch/1cls
+python realiad_uni.py --data_path ../Real-IAD
+
+
+
+## Citation
+
+@ARTICLE{11488626,
+  author={Zhou, Jingyu and Ma, Yunfeng and Jiang, Shuai and Wang, Yaonan and Liu, Min},
+  journal={IEEE Transactions on Circuits and Systems for Video Technology}, 
+  title={Cross-View Dynamic Learning-Based Multi-Class Industrial Anomaly Detection}, 
+  year={2026},
+  volume={},
+  number={},
+  pages={1-1},
+  keywords={Feeds;Antennas;Frequency modulation;Radio broadcasting;Broadcasting;Broadcast technology;Circuits;Circuits and systems;Integrated circuits;Light emitting diodes;Cross-view dynamic attention;multi-class industrial anomaly detection;multi-view feature learning},
+  doi={10.1109/TCSVT.2026.3685706}}
